@@ -1,0 +1,49 @@
+     0.058      33.7570     45.5740     13.01 20180111065932.447        1515653972.45
+ STA  COMP DIS(K) AZM  AIN    ARR TIME             RES(SEC) WT QFM PHASE    WGT
+
+
+ KAR2   Z  197.93 227.  52. 20180218070004.298         0.01  0 iD P        0.25
+ KAR2   Z  197.93 227.  52. 20180218070004.298         0.01  0 iD P        0.25
+ KAR2   Z  197.93 227.  52. 20180218070004.298         0.01  0 iD P        0.25
+ KAR2   Z  197.93 227.  52. 20180218070004.298         0.01  0 iD P        0.25
+ KAR2   Z  197.93 227.  52. 20180218070004.298         0.01  0 iD P        0.25
+ KAR2   Z  197.93 227.  52. 20180218070004.298         0.01  0 iD P        0.25
+ SLY1   Z  202.95 355.  52. 20180111070004.924        -0.00  0 iC P        0.24
+ AMR2   Z  247.54 142.  52. 20180111070010.700         0.13  2 eC P        0.08
+ BSR2   Z  429.96 153.  52. 20180111070030.794        -2.87  2 eC P        0.00
+ NSR4   E
+ KIR1   E
+ ANB1   E
+ DHK1   E
+ SAM1   N
+ DYL1   N
+ BAG1   N
+ KUT1   N
+ TIK1   N
+ KAR2   E
+ KAR2   
+
+ RETURN FOR NEXT SCREEN
+
+
+
+
+ Error Ellipse  X=   1.1061 km  Y= 2.1313 km  Theta =  12.1899 deg
+
+ RMS Error        :               0.068              sec
+ Travel_Time_Table:          WUS     
+ Latitude         :             33.7570 +-    0.0105 N         1.1711 km
+ Longitude        :             45.5740 +-    0.0228 E         2.0963 km
+ Depth            :               13.01 +-      0.00 km
+ Epoch Time       :      1515653972.447 +-      0.14 sec
+ Event Time       :  20180111065932.447 +-      0.14 sec
+ Event (OCAL)     :  2018 01 11 06 59 32 447
+ HYPO71 Quality   :                  BD
+ Gap              :                 147              deg
+ 
+    ch evla    33.7570 evlo    45.5740 evdp      13.01
+    ch ocal   2018 01 11 06 59 32 447
+ 
+    ch o gmt   2018  11  06 59 32 447
+Magnitude: 5 
+

@@ -1,0 +1,258 @@
+{% extends "testdb/base.html" %}
+{% block content %}
+	
+  <title>Siesmic network and stations</title>
+	<div>
+
+		<style type="text/css">
+			@media screen and (max-width: 800px)
+			{
+			  p { display: inline; }
+			  img { position: absolute; }
+			}
+		</style>
+		<p style="font-family: time new ramone; font-size: 19px; text-align: justify; margin : 0; margin-left: 130px; margin-top: 60px; width: 115%"><strong style="font-size: 22px">Mesopotamian Seismological Center</strong> <br><br>
+
+After 2003, Haydar Al-Shukri and Hanan Mahdi of the University of Arkansas at Little Rock (UA Little Rock) initiated a collaborative project with Lawrence Livermore National Lab (LLNL) to restart the seismology research and monitoring in Iraq. The project was initially supported by funding from the National Science Foundation, US DoE, and UA Little Rock. 
+In 2007, the first broadband seismic station was installed in Duhok (DHK). During the 2014 and 2015 period, five more broadband seismic stations were installed in Basrah (BSR), Nasiriya (NSR), Amarah (AMR), Karbala (KAR), and Sulaymaniyah (SYL) cities. During the 2017 and 2018 period, other six broadband seismic stations were installed in Kirkuk (KIR), Anbar (ANB), Baghdad (BGD), Diyala (DYA), Kut (KUT), and Samawa (SAM) cities. Table 1 lists the information of the temporary and permanent broadband seismic stations, and Figure 1 represents the location map.
+All these stations were installed in cooperation with the Universities of Basrah, Baghdad, Anbar, Sulaymaniyah, and Duhok. Since 2014, LLNL has financially supported the project. The aim of having these stations is to study the seismicity of Iraq, and also to fill the gap of broadband seismic stations near the Zagros belt, which is the most seismic area in the region.
+The Seismological Laboratory of University of Basrah (SLUB) was established in 2014 at the Department of Geology, College of Science, University of Basrah. SLUB is the data center that collects, reformats, and archives digital data from all broadband seismic stations, which are under the Iraqi Seismic Observatory (ISO). The MP, which stands for Mesopotamia, is the network code that was assigned by the International Federation of Digital Seismograph Networks (FDSN). 
+</p><p style="margin : 0; margin-left: 130px; margin-top: 3px; position: relative; font-family: time new romane; font-size: 19px;">For more details, see <a target="_blank" href="https://www.fdsn.org/networks/detail/MP/"> https://www.fdsn.org/networks/detail/MP/</a></p> 
+
+	</div>
+	<img style="margin-left: 320px; margin-top: 50px; position: relative;" src="https://i.pinimg.com/originals/b5/84/8e/b5848ea508937920e261713a3a82c505.jpg">
+	<p style="margin-left: 320px; text-align: justify; margin-top: 50px; position: relative; font-size: 19px; font-family: time new romane; width: 70%"><strong>Figure 1:</strong> Seismic local stations of Mesopotamian seismological center. The yellow triangles represent the permanent stations while the red is the temporary stations.
+	</p>
+
+<br><br><br>
+
+
+<style type="text/css">
+	table {
+	  border-collapse: collapse;
+	  width: 100%;
+	  border: 1px solid black;
+	}
+
+	th, td {
+	  text-align: center;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even)
+	{
+	  background-color: #c9def0;
+	  border: 1px solid black;
+	}
+
+	th {
+	  background-color: #96cb7f;
+	  color: black;
+	}
+</style>
+
+<div class="table-responsive-lg">
+	<table style="width: 150%; margin-left: 22px;">
+		<tr>
+			<th>Station Code</th>
+			<th>Station Name</th>
+			<th>Lat.</th>
+			<th>Log.</th>
+			<th>Elv. (m)</th>
+			<th>Begin Y/M/D</th>
+			<th>End Y/M/D</th>
+			<th>Sensor/digitizer type</th>
+			<th>Serial No.</th>
+		</tr>
+		<tr>
+			<td>AMR1</td>
+			<td>Amarah</td>
+			<td>31.9590</td>
+			<td>46.9286</td>
+			<td>9</td>
+			<td>2015/03/06</td>
+			<td>2015/10/31</td>
+			<td>CMG-40T/DM24</td>
+			<td>DC54</td>
+		</tr>
+		<tr>
+			<td>AMR2</td>
+			<td>Amarah</td>
+			<td>31.9899</td>
+			<td>47.1902</td>
+			<td>9</td>
+			<td>2015/11/07<br>2018/09/04</td>
+			<td>2018/09/03<br>--</td>
+			<td>CMG-40T/DM24<br>CMG-3ESP/DM24</td>
+			<td>DC54<br>B628</td>
+		</tr>
+		<tr>
+			<td>ANB1</td>
+			<td>Anbar</td>
+			<td>33.4018</td>
+			<td>43.2576</td>
+			<td>52</td>
+			<td>2018/10/16</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td>T3184/B62900</td>
+		</tr>
+		<tr>
+			<td>BAG1</td>
+			<td>Baghdad</td>
+			<td>33.5092</td>
+			<td>44.3437</td>
+			<td>36</td>
+			<td>2019/01/01</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>BSR1</td>
+			<td>Basrah</td>
+			<td>30.3581</td>
+			<td>47.6153</td>
+			<td>12</td>
+			<td>2014/08/10</td>
+			<td>2015/08/28</td>
+			<td>CMG-40T/DM24</td>
+			<td>4243</td>
+		</tr>
+		<tr>
+			<td>BSR2</td>
+			<td>Basrah</td>
+			<td>30.2927</td>
+			<td>47.6191</td>
+			<td>16</td>
+			<td>2015/09/05</td>
+			<td>--</td>
+			<td>CMG-40T/DM24</td>
+			<td>4243</td>
+		</tr>
+		<tr>
+			<td>DHK1</td>
+			<td>Duhok</td>
+			<td>36.8606</td>
+			<td>42.8665</td>
+			<td>766</td>
+			<td>2007/01/03</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td>T3P30/D680</td>
+		</tr>
+		<tr>
+			<td>DIY1</td>
+			<td>Diyala</td>
+			<td>34.3333</td>
+			<td>45.4666</td>
+			<td>183</td>
+			<td>2019/01/01</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>NSR1</td>
+			<td>Nasiriya</td>
+			<td>31.7416</td>
+			<td>46.1151</td>
+			<td>12</td>
+			<td>2014/08/01</td>
+			<td>2017/09/30</td>
+			<td>CMG40T/DM24</td>
+			<td>DC56</td>
+		</tr>
+		<tr>
+			<td>NSR2</td>
+			<td>Nasiriya</td>
+			<td>31.5550</td>
+			<td>46.1374</td>
+			<td>9</td>
+			<td>2014/07/31</td>
+			<td>2014/09/21</td>
+			<td>CMG40T/DM24</td>
+			<td>DC35</td>
+		</tr>
+		<tr>
+			<td>NSR3</td>
+			<td>Nasiriya</td>
+			<td>31.0514</td>
+			<td>46.2199</td>
+			<td>6</td>
+			<td>2014/07/01</td>
+			<td>2014/11/30</td>
+			<td>CMG40T/DM24</td>
+			<td>DC54</td>
+		</tr>
+		<tr>
+			<td>NSR4</td>
+			<td>Nasiriya</td>
+			<td>31.5399</td>
+			<td>46.2016</td>
+			<td>7</td>
+			<td>2017/10/08</td>
+			<td>--</td>
+			<td>CMG-40T/DM24</td>
+			<td>DC56</td>
+		</tr>
+		<tr>
+			<td>KAR2</td>
+			<td>Karbala</td>
+			<td>32.5398</td>
+			<td>44.0224</td>
+			<td>45</td>
+			<td>2017/01/15</td>
+			<td>--</td>
+			<td>CMG-40T/DM24</td>
+			<td>DC35</td>
+		</tr>
+		<tr>
+			<td>KIR1</td>
+			<td>Kirkuk</td>
+			<td>35.3880</td>
+			<td>44.3419</td>
+			<td>290</td>
+			<td>2018/09/17</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td>B634</td>
+		</tr>
+		<tr>
+			<td>KUT1</td>
+			<td>Kut</td>
+			<td>32.5091</td>
+			<td>45.7973</td>
+			<td>17</td>
+			<td>2019/01/01</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SAM1</td>
+			<td>Samawa</td>
+			<td>31.66148</td>
+			<td>45.18344</td>
+			<td>17</td>
+			<td>2020/12/22</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>SLY1</td>
+			<td>Sulaymaniyah</td>
+			<td>35.5784</td>
+			<td>45.3667</td>
+			<td>756</td>
+			<td>2015/09/15</td>
+			<td>--</td>
+			<td>CMG-3ESP/DM24</td>
+			<td>T3G90/D682</td>
+		</tr>
+	</table>
+</div>
+<br>
+<p style="margin-left: 320px; text-align: justify; margin-top: -830px; position: relative; font-size: 19px; font-family: time new romane; width: 100%"><strong>Table 1: </strong>Seismic local stations of Mesopotamian seismological center.</p>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "testdb/base.html" %}
+{% block content %}
+<br>
+    <div style="margin-left: 120px; font-size: 17px; font-family: Times New Roman;">
+      {% if object.author == user %}
+        <div>
+          <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post_update' object.id %}">Update</a>
+          <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post_delete' object.id %}">Delete</a>
+        </div>
+      {% endif %}
+      <p><strong>Date - Time: </strong>{{ object.date_posted|date:"l F d, Y" }}</p>
+      <p><strong>Magnitude type: </strong> MN</p>
+      <p><strong>Depth: </strong>{{ post.Depth }}</p>
+      <p><strong>Magnitude: </strong>{{ post.Magnitude }}</p>
+      <p><strong>Location uncertainty: </strong>+/-{{ post.lu1 }} in N-S | +/-{{ post.lu2 }} in E-W </p>
+      <p><strong>RMS error: </strong>{{ post.RMS }}</p>
+      <a href="{% url 'post_phase' post.id %}">Phase (Arrival times)</a><br>
+      <img  width="70%" height="70%" src="{{ object.image.url }}">
+    </div>
+    <br> 
+
+{% endblock content %}

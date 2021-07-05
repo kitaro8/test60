@@ -1,0 +1,28 @@
+{% extends "testdb/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+    <div class="content-section" style="margin-left: 120px; font-family: time new romane">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+                <label for="title">Title</label>
+                <br>
+                <input type="title" name="title">
+                <hr>
+                <label for="date">Date</label>
+                <br>
+                <input type="text" name="date">
+                <hr>
+                <label for="file">File: </label>
+                <br>
+                <input type="file" name="file">
+                <br><hr>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

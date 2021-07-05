@@ -1,0 +1,78 @@
+{% extends "testdb/base.html" %}
+{% block content %}
+  <title>Focal Mechanism</title>
+<style type="text/css">
+  input[type=text], select, textarea {
+    width: 40%; 
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+  }
+
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .focal_search {
+    border-radius: 20px;
+    background-color: #d5e2f0;
+    padding: 40px;
+  }
+</style>
+
+    <br>
+  <div class="focal_search" style="margin-left: 80px; font-family: Times New Roman;">
+    <form method="GET" action="{% url 'search_focal' %}">
+      <p>Date (YYYY-MM-DD)</p><input placeholder="From" type="text" name="datef" value="{{ request.GET.datef }}">
+      <input placeholder="To" type="text" name="datet" value="{{ request.GET.datet }}">
+      <br><hr>
+      <input class="btn btn-info" type="submit"></input>
+    </form>
+  </div>
+  <br>
+
+  <div style="margin-left: 80px; border-radius: 20px;
+    background-color: #d5e2f0;
+    padding: 40px;">
+    {% for focal in focal %}
+
+        <a href="{{ focal.file.url }}" download=""><h4 style="display: inline-block;">{{ focal.date }} ,</h4><h4 style="display: inline-block;">{{ focal.title }}</h4></a><hr>
+
+    {% endfor %}
+  </div>
+  <br>
+
+  <div style="margin-left: 80px">
+    {% if is_paginated %}
+
+      {% if page_obj.has_previous %}
+        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+
+      {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+          <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+      {% endif %}
+
+    {% endif %}
+  </div>
+  <br>
+{% endblock content %}

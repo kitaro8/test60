@@ -1,0 +1,69 @@
+{% extends "testdb/base.html" %}
+{% block content %}
+  <title>Focal Mechanism</title>
+<style type="text/css">
+  input[type=text], select, textarea {
+    width: 40%; 
+    padding: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+  }
+
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .focal_search {
+    border-radius: 20px;
+    background-color: #d5e2f0;
+    padding: 40px;
+  }
+</style>
+
+  <br>
+
+  <div style="margin-left: 80px; border-radius: 20px;
+    background-color: #d5e2f0;
+    padding: 40px;">
+    {% for report in report %}
+
+        <a href="{{ report.file.url }}" download="{{ report.file.url }}"><h4 style="display: inline-block;">{{ report.date }} ,</h4><h4 style="display: inline-block;">{{ report.title }}</h4></a><hr>
+
+    {% endfor %}
+  </div>
+  <br>
+
+  <div style="margin-left: 120px">
+    {% if is_paginated %}
+
+      {% if page_obj.has_previous %}
+        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+      {% endif %}
+
+      {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+          <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+          <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if page_obj.has_next %}
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+      {% endif %}
+
+    {% endif %}
+  </div>
+  <br>
+{% endblock content %}

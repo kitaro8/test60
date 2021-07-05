@@ -1,0 +1,2041 @@
+{% extends "testdb/base.html" %}
+{% block content %}
+
+<br><br>
+	<table style="width:1000px; margin-left: 70px;">
+	  <tr>
+	    <th>Station ID</th>
+	    <th>Component</th>
+	    <th>Phase</th>
+	    <th>Arrival Time</th>
+	    <th>Time Residual (sec)</th>
+	    <th>Azimuth (deg)</th>
+	    <th>Epicenteral Dis. (km)</th>
+	  </tr>
+	{% if post.comp.0 %}
+	  <tr>
+	    <td>{{ post.station.0 }}</td>
+	    {% if post.comp.0 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.0 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.0 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.0 }}</td>
+	    <td>{{ post.ARR_TIME.0 }}</td>
+	    <td>{{ post.RES.0 }}</td>
+	    <td>{{ post.AZM.0 }}</td>
+	    <td>{{ post.DIS.0 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.1 %}
+	  <tr>
+	    <td>{{ post.station.1 }}</td>
+	    {% if post.comp.1 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.1 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.1 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.1 }}</td>
+	    <td>{{ post.ARR_TIME.1 }}</td>
+	    <td>{{ post.RES.1 }}</td>
+	    <td>{{ post.AZM.1 }}</td>
+	    <td>{{ post.DIS.1 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.2 %}
+	  <tr>
+	    <td>{{ post.station.2 }}</td>
+	    {% if post.comp.2 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.2 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.2 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.2 }}</td>
+	    <td>{{ post.ARR_TIME.2 }}</td>
+	    <td>{{ post.RES.2 }}</td>
+	    <td>{{ post.AZM.2 }}</td>
+	    <td>{{ post.DIS.2 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.3 %}
+	  <tr>
+	    <td>{{ post.station.3 }}</td>
+	    {% if post.comp.3 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.3 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.3 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.3 }}</td>
+	    <td>{{ post.ARR_TIME.3 }}</td>
+	    <td>{{ post.RES.3 }}</td>
+	    <td>{{ post.AZM.3 }}</td>
+	    <td>{{ post.DIS.3 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.4 %}
+	  <tr>
+	    <td>{{ post.station.4 }}</td>
+	    {% if post.comp.4 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.4 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.4 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.4 }}</td>
+	    <td>{{ post.ARR_TIME.4 }}</td>
+	    <td>{{ post.RES.4 }}</td>
+	    <td>{{ post.AZM.4 }}</td>
+	    <td>{{ post.DIS.4 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.5 %}
+	  <tr>
+	    <td>{{ post.station.5 }}</td>
+	    {% if post.comp.5 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.5 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.5 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.5 }}</td>
+	    <td>{{ post.ARR_TIME.5 }}</td>
+	    <td>{{ post.RES.5 }}</td>
+	    <td>{{ post.AZM.5 }}</td>
+	    <td>{{ post.DIS.5 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.6 %}
+	  <tr>
+	    <td>{{ post.station.6 }}</td>
+	    {% if post.comp.6 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.6 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.6 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.6 }}</td>
+	    <td>{{ post.ARR_TIME.6 }}</td>
+	    <td>{{ post.RES.6 }}</td>
+	    <td>{{ post.AZM.6 }}</td>
+	    <td>{{ post.DIS.6 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.7 %}
+	  <tr>
+	    <td>{{ post.station.7 }}</td>
+	    {% if post.comp.7 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.7 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.7 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.7 }}</td>
+	    <td>{{ post.ARR_TIME.7 }}</td>
+	    <td>{{ post.RES.7 }}</td>
+	    <td>{{ post.AZM.7 }}</td>
+	    <td>{{ post.DIS.7 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.8 %}
+	  <tr>
+	    <td>{{ post.station.8 }}</td>
+	    {% if post.comp.8 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.8 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.8 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.8 }}</td>
+	    <td>{{ post.ARR_TIME.8 }}</td>
+	    <td>{{ post.RES.8 }}</td>
+	    <td>{{ post.AZM.8 }}</td>
+	    <td>{{ post.DIS.8 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.9 %}
+	  <tr>
+	    <td>{{ post.station.9 }}</td>
+	    {% if post.comp.9 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.9 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.9 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.9 }}</td>
+	    <td>{{ post.ARR_TIME.9 }}</td>
+	    <td>{{ post.RES.9 }}</td>
+	    <td>{{ post.AZM.9 }}</td>
+	    <td>{{ post.DIS.9 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.10 %}
+	  <tr>
+	    <td>{{ post.station.10 }}</td>
+	    {% if post.comp.10 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.10 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.10 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.10 }}</td>
+	    <td>{{ post.ARR_TIME.10 }}</td>
+	    <td>{{ post.RES.10 }}</td>
+	    <td>{{ post.AZM.10 }}</td>
+	    <td>{{ post.DIS.10 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.11 %}
+	  <tr>
+	    <td>{{ post.station.11 }}</td>
+	    {% if post.comp.11 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.11 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.11 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.11 }}</td>
+	    <td>{{ post.ARR_TIME.11 }}</td>
+	    <td>{{ post.RES.11 }}</td>
+	    <td>{{ post.AZM.11 }}</td>
+	    <td>{{ post.DIS.11 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.12 %}
+	  <tr>
+	    <td>{{ post.station.12 }}</td>
+	    {% if post.comp.12 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.12 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.12 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.12 }}</td>
+	    <td>{{ post.ARR_TIME.12 }}</td>
+	    <td>{{ post.RES.12 }}</td>
+	    <td>{{ post.AZM.12 }}</td>
+	    <td>{{ post.DIS.12 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.13 %}
+	  <tr>
+	    <td>{{ post.station.13 }}</td>
+	    {% if post.comp.13 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.13 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.13 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.13 }}</td>
+	    <td>{{ post.ARR_TIME.13 }}</td>
+	    <td>{{ post.RES.13 }}</td>
+	    <td>{{ post.AZM.13 }}</td>
+	    <td>{{ post.DIS.13 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.14 %}
+	  <tr>
+	    <td>{{ post.station.14 }}</td>
+	    {% if post.comp.14 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.14 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.14 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.14 }}</td>
+	    <td>{{ post.ARR_TIME.14 }}</td>
+	    <td>{{ post.RES.14 }}</td>
+	    <td>{{ post.AZM.14 }}</td>
+	    <td>{{ post.DIS.14 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.15 %}
+	  <tr>
+	    <td>{{ post.station.15 }}</td>
+	    {% if post.comp.15 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.15 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.15 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.15 }}</td>
+	    <td>{{ post.ARR_TIME.15 }}</td>
+	    <td>{{ post.RES.15 }}</td>
+	    <td>{{ post.AZM.15 }}</td>
+	    <td>{{ post.DIS.15 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.16 %}
+	  <tr>
+	    <td>{{ post.station.16 }}</td>
+	    {% if post.comp.16 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.16 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.16 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.16 }}</td>
+	    <td>{{ post.ARR_TIME.16 }}</td>
+	    <td>{{ post.RES.16 }}</td>
+	    <td>{{ post.AZM.16 }}</td>
+	    <td>{{ post.DIS.16 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.17 %}
+	  <tr>
+	    <td>{{ post.station.17 }}</td>
+	    {% if post.comp.17 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.17 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.17 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.17 }}</td>
+	    <td>{{ post.ARR_TIME.17 }}</td>
+	    <td>{{ post.RES.17 }}</td>
+	    <td>{{ post.AZM.17 }}</td>
+	    <td>{{ post.DIS.17 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.18 %}
+	  <tr>
+	    <td>{{ post.station.18 }}</td>
+	    {% if post.comp.18 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.18 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.18 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.18 }}</td>
+	    <td>{{ post.ARR_TIME.18 }}</td>
+	    <td>{{ post.RES.18 }}</td>
+	    <td>{{ post.AZM.18 }}</td>
+	    <td>{{ post.DIS.18 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.19 %}
+	  <tr>
+	    <td>{{ post.station.19 }}</td>
+	    {% if post.comp.19 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.19 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.19 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.19 }}</td>
+	    <td>{{ post.ARR_TIME.19 }}</td>
+	    <td>{{ post.RES.19 }}</td>
+	    <td>{{ post.AZM.19 }}</td>
+	    <td>{{ post.DIS.19 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.20 %}
+	  <tr>
+	    <td>{{ post.station.20 }}</td>
+	    {% if post.comp.20 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.20 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.20 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.20 }}</td>
+	    <td>{{ post.ARR_TIME.20 }}</td>
+	    <td>{{ post.RES.20 }}</td>
+	    <td>{{ post.AZM.20 }}</td>
+	    <td>{{ post.DIS.20 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.21 %}
+	  <tr>
+	    <td>{{ post.station.21 }}</td>
+	    {% if post.comp.21 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.21 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.21 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.21 }}</td>
+	    <td>{{ post.ARR_TIME.21 }}</td>
+	    <td>{{ post.RES.21 }}</td>
+	    <td>{{ post.AZM.21 }}</td>
+	    <td>{{ post.DIS.21 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.22 %}
+	  <tr>
+	    <td>{{ post.station.22 }}</td>
+	    {% if post.comp.22 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.22 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.22 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.22 }}</td>
+	    <td>{{ post.ARR_TIME.22 }}</td>
+	    <td>{{ post.RES.22 }}</td>
+	    <td>{{ post.AZM.22 }}</td>
+	    <td>{{ post.DIS.22 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.23 %}
+	  <tr>
+	    <td>{{ post.station.23 }}</td>
+	    {% if post.comp.23 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.23 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.23 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.23 }}</td>
+	    <td>{{ post.ARR_TIME.23 }}</td>
+	    <td>{{ post.RES.23 }}</td>
+	    <td>{{ post.AZM.23 }}</td>
+	    <td>{{ post.DIS.23 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.24 %}
+	  <tr>
+	    <td>{{ post.station.24 }}</td>
+	    {% if post.comp.24 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.24 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.24 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.24 }}</td>
+	    <td>{{ post.ARR_TIME.24 }}</td>
+	    <td>{{ post.RES.24 }}</td>
+	    <td>{{ post.AZM.24 }}</td>
+	    <td>{{ post.DIS.24 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.25 %}
+	  <tr>
+	    <td>{{ post.station.25 }}</td>
+	    {% if post.comp.25 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.25 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.25 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.25 }}</td>
+	    <td>{{ post.ARR_TIME.25 }}</td>
+	    <td>{{ post.RES.25 }}</td>
+	    <td>{{ post.AZM.25 }}</td>
+	    <td>{{ post.DIS.25 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.26 %}
+	  <tr>
+	    <td>{{ post.station.26 }}</td>
+	    {% if post.comp.26 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.26 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.26 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.26 }}</td>
+	    <td>{{ post.ARR_TIME.26 }}</td>
+	    <td>{{ post.RES.26 }}</td>
+	    <td>{{ post.AZM.26 }}</td>
+	    <td>{{ post.DIS.26 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.27 %}
+	  <tr>
+	    <td>{{ post.station.27 }}</td>
+	    {% if post.comp.27 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.27 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.27 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.27 }}</td>
+	    <td>{{ post.ARR_TIME.27 }}</td>
+	    <td>{{ post.RES.27 }}</td>
+	    <td>{{ post.AZM.27 }}</td>
+	    <td>{{ post.DIS.27 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.28 %}
+	  <tr>
+	    <td>{{ post.station.28 }}</td>
+	    {% if post.comp.28 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.28 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.28 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.28 }}</td>
+	    <td>{{ post.ARR_TIME.28 }}</td>
+	    <td>{{ post.RES.28 }}</td>
+	    <td>{{ post.AZM.28 }}</td>
+	    <td>{{ post.DIS.28 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.29 %}
+	  <tr>
+	    <td>{{ post.station.29 }}</td>
+	    {% if post.comp.29 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.29 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.29 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.29 }}</td>
+	    <td>{{ post.ARR_TIME.29 }}</td>
+	    <td>{{ post.RES.29 }}</td>
+	    <td>{{ post.AZM.29 }}</td>
+	    <td>{{ post.DIS.29 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.30 %}
+	  <tr>
+	    <td>{{ post.station.30 }}</td>
+	    {% if post.comp.30 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.30 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.30 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.30 }}</td>
+	    <td>{{ post.ARR_TIME.30 }}</td>
+	    <td>{{ post.RES.30 }}</td>
+	    <td>{{ post.AZM.30 }}</td>
+	    <td>{{ post.DIS.30 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.31 %}
+	  <tr>
+	    <td>{{ post.station.31 }}</td>
+	    {% if post.comp.31 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.31 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.31 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.31 }}</td>
+	    <td>{{ post.ARR_TIME.31 }}</td>
+	    <td>{{ post.RES.31 }}</td>
+	    <td>{{ post.AZM.31 }}</td>
+	    <td>{{ post.DIS.31 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.32 %}
+	  <tr>
+	    <td>{{ post.station.32 }}</td>
+	    {% if post.comp.32 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.32 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.32 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.32 }}</td>
+	    <td>{{ post.ARR_TIME.32 }}</td>
+	    <td>{{ post.RES.32 }}</td>
+	    <td>{{ post.AZM.32 }}</td>
+	    <td>{{ post.DIS.32 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.33 %}
+	  <tr>
+	    <td>{{ post.station.33 }}</td>
+	    {% if post.comp.33 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.33 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.33 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.33 }}</td>
+	    <td>{{ post.ARR_TIME.33 }}</td>
+	    <td>{{ post.RES.33 }}</td>
+	    <td>{{ post.AZM.33 }}</td>
+	    <td>{{ post.DIS.33 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.34 %}
+	  <tr>
+	    <td>{{ post.station.34 }}</td>
+	    {% if post.comp.34 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.34 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.34 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.34 }}</td>
+	    <td>{{ post.ARR_TIME.34 }}</td>
+	    <td>{{ post.RES.34 }}</td>
+	    <td>{{ post.AZM.34 }}</td>
+	    <td>{{ post.DIS.34 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.35 %}
+	  <tr>
+	    <td>{{ post.station.35 }}</td>
+	    {% if post.comp.35 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.35 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.35 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.35 }}</td>
+	    <td>{{ post.ARR_TIME.35 }}</td>
+	    <td>{{ post.RES.35 }}</td>
+	    <td>{{ post.AZM.35 }}</td>
+	    <td>{{ post.DIS.35 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.36 %}
+	  <tr>
+	    <td>{{ post.station.36 }}</td>
+	    {% if post.comp.36 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.36 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.36 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.36 }}</td>
+	    <td>{{ post.ARR_TIME.36 }}</td>
+	    <td>{{ post.RES.36 }}</td>
+	    <td>{{ post.AZM.36 }}</td>
+	    <td>{{ post.DIS.36 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.37 %}
+	  <tr>
+	    <td>{{ post.station.37 }}</td>
+	    {% if post.comp.37 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.37 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.37 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.37 }}</td>
+	    <td>{{ post.ARR_TIME.37 }}</td>
+	    <td>{{ post.RES.37 }}</td>
+	    <td>{{ post.AZM.37 }}</td>
+	    <td>{{ post.DIS.37 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.38 %}
+	  <tr>
+	    <td>{{ post.station.38 }}</td>
+	    {% if post.comp.38 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.38 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.38 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.38 }}</td>
+	    <td>{{ post.ARR_TIME.38 }}</td>
+	    <td>{{ post.RES.38 }}</td>
+	    <td>{{ post.AZM.38 }}</td>
+	    <td>{{ post.DIS.38 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.39 %}
+	  <tr>
+	    <td>{{ post.station.39 }}</td>
+	    {% if post.comp.39 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.39 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.39 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.39 }}</td>
+	    <td>{{ post.ARR_TIME.39 }}</td>
+	    <td>{{ post.RES.39 }}</td>
+	    <td>{{ post.AZM.39 }}</td>
+	    <td>{{ post.DIS.39 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.40 %}
+	  <tr>
+	    <td>{{ post.station.40 }}</td>
+	    {% if post.comp.40 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.40 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.40 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.40 }}</td>
+	    <td>{{ post.ARR_TIME.40 }}</td>
+	    <td>{{ post.RES.40 }}</td>
+	    <td>{{ post.AZM.40 }}</td>
+	    <td>{{ post.DIS.40 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.41 %}
+	  <tr>
+	    <td>{{ post.station.41 }}</td>
+	    {% if post.comp.41 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.41 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.41 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.41 }}</td>
+	    <td>{{ post.ARR_TIME.41 }}</td>
+	    <td>{{ post.RES.41 }}</td>
+	    <td>{{ post.AZM.41 }}</td>
+	    <td>{{ post.DIS.41 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.42 %}
+	  <tr>
+	    <td>{{ post.station.42 }}</td>
+	    {% if post.comp.42 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.42 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.42 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.42 }}</td>
+	    <td>{{ post.ARR_TIME.42 }}</td>
+	    <td>{{ post.RES.42 }}</td>
+	    <td>{{ post.AZM.42 }}</td>
+	    <td>{{ post.DIS.42 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.43 %}
+	  <tr>
+	    <td>{{ post.station.43 }}</td>
+	    {% if post.comp.43 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.43 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.43 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.43 }}</td>
+	    <td>{{ post.ARR_TIME.43 }}</td>
+	    <td>{{ post.RES.43 }}</td>
+	    <td>{{ post.AZM.43 }}</td>
+	    <td>{{ post.DIS.43 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.44 %}
+	  <tr>
+	    <td>{{ post.station.44 }}</td>
+	    {% if post.comp.44 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.44 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.44 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.44 }}</td>
+	    <td>{{ post.ARR_TIME.44 }}</td>
+	    <td>{{ post.RES.44 }}</td>
+	    <td>{{ post.AZM.44 }}</td>
+	    <td>{{ post.DIS.44 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.45 %}
+	  <tr>
+	    <td>{{ post.station.45 }}</td>
+	    {% if post.comp.45 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.45 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.45 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.45 }}</td>
+	    <td>{{ post.ARR_TIME.45 }}</td>
+	    <td>{{ post.RES.45 }}</td>
+	    <td>{{ post.AZM.45 }}</td>
+	    <td>{{ post.DIS.45 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.46 %}
+	  <tr>
+	    <td>{{ post.station.46 }}</td>
+	    {% if post.comp.46 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.46 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.46 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.46 }}</td>
+	    <td>{{ post.ARR_TIME.46 }}</td>
+	    <td>{{ post.RES.46 }}</td>
+	    <td>{{ post.AZM.46 }}</td>
+	    <td>{{ post.DIS.46 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.47 %}
+	  <tr>
+	    <td>{{ post.station.47 }}</td>
+	    {% if post.comp.47 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.47 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.47 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.47 }}</td>
+	    <td>{{ post.ARR_TIME.47 }}</td>
+	    <td>{{ post.RES.47 }}</td>
+	    <td>{{ post.AZM.47 }}</td>
+	    <td>{{ post.DIS.47 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.48 %}
+	  <tr>
+	    <td>{{ post.station.48 }}</td>
+	    {% if post.comp.48 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.48 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.48 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.48 }}</td>
+	    <td>{{ post.ARR_TIME.48 }}</td>
+	    <td>{{ post.RES.48 }}</td>
+	    <td>{{ post.AZM.48 }}</td>
+	    <td>{{ post.DIS.48 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.49 %}
+	  <tr>
+	    <td>{{ post.station.49 }}</td>
+	    {% if post.comp.49 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.49 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.49 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.49 }}</td>
+	    <td>{{ post.ARR_TIME.49 }}</td>
+	    <td>{{ post.RES.49 }}</td>
+	    <td>{{ post.AZM.49 }}</td>
+	    <td>{{ post.DIS.49 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.50 %}
+	  <tr>
+	    <td>{{ post.station.50 }}</td>
+	    {% if post.comp.50 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.50 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.50 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.50 }}</td>
+	    <td>{{ post.ARR_TIME.50 }}</td>
+	    <td>{{ post.RES.50 }}</td>
+	    <td>{{ post.AZM.50 }}</td>
+	    <td>{{ post.DIS.50 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.51 %}
+	  <tr>
+	    <td>{{ post.station.51 }}</td>
+	    {% if post.comp.51 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.51 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.51 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.51 }}</td>
+	    <td>{{ post.ARR_TIME.51 }}</td>
+	    <td>{{ post.RES.51 }}</td>
+	    <td>{{ post.AZM.51 }}</td>
+	    <td>{{ post.DIS.51 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.52 %}
+	  <tr>
+	    <td>{{ post.station.52 }}</td>
+	    {% if post.comp.52 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.52 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.52 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.52 }}</td>
+	    <td>{{ post.ARR_TIME.52 }}</td>
+	    <td>{{ post.RES.52 }}</td>
+	    <td>{{ post.AZM.52 }}</td>
+	    <td>{{ post.DIS.52 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.53 %}
+	  <tr>
+	    <td>{{ post.station.53 }}</td>
+	    {% if post.comp.53 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.53 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.53 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.53 }}</td>
+	    <td>{{ post.ARR_TIME.53 }}</td>
+	    <td>{{ post.RES.53 }}</td>
+	    <td>{{ post.AZM.53 }}</td>
+	    <td>{{ post.DIS.53 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.54 %}
+	  <tr>
+	    <td>{{ post.station.54 }}</td>
+	    {% if post.comp.54 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.54 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.54 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.54 }}</td>
+	    <td>{{ post.ARR_TIME.54 }}</td>
+	    <td>{{ post.RES.54 }}</td>
+	    <td>{{ post.AZM.54 }}</td>
+	    <td>{{ post.DIS.54 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.55 %}
+	  <tr>
+	    <td>{{ post.station.55 }}</td>
+	    {% if post.comp.55 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.55 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.55 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.55 }}</td>
+	    <td>{{ post.ARR_TIME.55 }}</td>
+	    <td>{{ post.RES.55 }}</td>
+	    <td>{{ post.AZM.55 }}</td>
+	    <td>{{ post.DIS.55 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.56 %}
+	  <tr>
+	    <td>{{ post.station.56 }}</td>
+	    {% if post.comp.56 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.56 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.56 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.56 }}</td>
+	    <td>{{ post.ARR_TIME.56 }}</td>
+	    <td>{{ post.RES.56 }}</td>
+	    <td>{{ post.AZM.56 }}</td>
+	    <td>{{ post.DIS.56 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.57 %}
+	  <tr>
+	    <td>{{ post.station.57 }}</td>
+	    {% if post.comp.57 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.57 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.57 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.57 }}</td>
+	    <td>{{ post.ARR_TIME.57 }}</td>
+	    <td>{{ post.RES.57 }}</td>
+	    <td>{{ post.AZM.57 }}</td>
+	    <td>{{ post.DIS.57 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.58 %}
+	  <tr>
+	    <td>{{ post.station.58 }}</td>
+	    {% if post.comp.58 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.58 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.58 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.58 }}</td>
+	    <td>{{ post.ARR_TIME.58 }}</td>
+	    <td>{{ post.RES.58 }}</td>
+	    <td>{{ post.AZM.58 }}</td>
+	    <td>{{ post.DIS.58 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.59 %}
+	  <tr>
+	    <td>{{ post.station.59 }}</td>
+	    {% if post.comp.59 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.59 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.59 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.59 }}</td>
+	    <td>{{ post.ARR_TIME.59 }}</td>
+	    <td>{{ post.RES.59 }}</td>
+	    <td>{{ post.AZM.59 }}</td>
+	    <td>{{ post.DIS.59 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.60 %}
+	  <tr>
+	    <td>{{ post.station.60 }}</td>
+	    {% if post.comp.60 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.60 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.60 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.60 }}</td>
+	    <td>{{ post.ARR_TIME.60 }}</td>
+	    <td>{{ post.RES.60 }}</td>
+	    <td>{{ post.AZM.60 }}</td>
+	    <td>{{ post.DIS.60 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.61 %}
+	  <tr>
+	    <td>{{ post.station.61 }}</td>
+	    {% if post.comp.61 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.61 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.61 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.61 }}</td>
+	    <td>{{ post.ARR_TIME.61 }}</td>
+	    <td>{{ post.RES.61 }}</td>
+	    <td>{{ post.AZM.61 }}</td>
+	    <td>{{ post.DIS.61 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.62 %}
+	  <tr>
+	    <td>{{ post.station.62 }}</td>
+	    {% if post.comp.62 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.62 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.62 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.62 }}</td>
+	    <td>{{ post.ARR_TIME.62 }}</td>
+	    <td>{{ post.RES.62 }}</td>
+	    <td>{{ post.AZM.62 }}</td>
+	    <td>{{ post.DIS.62 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.63 %}
+	  <tr>
+	    <td>{{ post.station.63 }}</td>
+	    {% if post.comp.63 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.63 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.63 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.63 }}</td>
+	    <td>{{ post.ARR_TIME.63 }}</td>
+	    <td>{{ post.RES.63 }}</td>
+	    <td>{{ post.AZM.63 }}</td>
+	    <td>{{ post.DIS.63 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.64 %}
+	  <tr>
+	    <td>{{ post.station.64 }}</td>
+	    {% if post.comp.64 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.64 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.64 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.64 }}</td>
+	    <td>{{ post.ARR_TIME.64 }}</td>
+	    <td>{{ post.RES.64 }}</td>
+	    <td>{{ post.AZM.64 }}</td>
+	    <td>{{ post.DIS.64 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.65 %}
+	  <tr>
+	    <td>{{ post.station.65 }}</td>
+	    {% if post.comp.65 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.65 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.65 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.65 }}</td>
+	    <td>{{ post.ARR_TIME.65 }}</td>
+	    <td>{{ post.RES.65 }}</td>
+	    <td>{{ post.AZM.65 }}</td>
+	    <td>{{ post.DIS.65 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.66 %}
+	  <tr>
+	    <td>{{ post.station.66 }}</td>
+	    {% if post.comp.66 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.66 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.66 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.66 }}</td>
+	    <td>{{ post.ARR_TIME.66 }}</td>
+	    <td>{{ post.RES.66 }}</td>
+	    <td>{{ post.AZM.66 }}</td>
+	    <td>{{ post.DIS.66 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.67 %}
+	  <tr>
+	    <td>{{ post.station.67 }}</td>
+	    {% if post.comp.67 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.67 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.67 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.67 }}</td>
+	    <td>{{ post.ARR_TIME.67 }}</td>
+	    <td>{{ post.RES.67 }}</td>
+	    <td>{{ post.AZM.67 }}</td>
+	    <td>{{ post.DIS.67 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.68 %}
+	  <tr>
+	    <td>{{ post.station.68 }}</td>
+	    {% if post.comp.68 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.68 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.68 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.68 }}</td>
+	    <td>{{ post.ARR_TIME.68 }}</td>
+	    <td>{{ post.RES.68 }}</td>
+	    <td>{{ post.AZM.68 }}</td>
+	    <td>{{ post.DIS.68 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.69 %}
+	  <tr>
+	    <td>{{ post.station.69 }}</td>
+	    {% if post.comp.69 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.69 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.69 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.69 }}</td>
+	    <td>{{ post.ARR_TIME.69 }}</td>
+	    <td>{{ post.RES.69 }}</td>
+	    <td>{{ post.AZM.69 }}</td>
+	    <td>{{ post.DIS.69 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.70 %}
+	  <tr>
+	    <td>{{ post.station.70 }}</td>
+	    {% if post.comp.70 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.70 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.70 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.70 }}</td>
+	    <td>{{ post.ARR_TIME.70 }}</td>
+	    <td>{{ post.RES.70 }}</td>
+	    <td>{{ post.AZM.70 }}</td>
+	    <td>{{ post.DIS.70 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.71 %}
+	  <tr>
+	    <td>{{ post.station.71 }}</td>
+	    {% if post.comp.71 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.71 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.71 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.71 }}</td>
+	    <td>{{ post.ARR_TIME.71 }}</td>
+	    <td>{{ post.RES.71 }}</td>
+	    <td>{{ post.AZM.71 }}</td>
+	    <td>{{ post.DIS.71 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.72 %}
+	  <tr>
+	    <td>{{ post.station.72 }}</td>
+	    {% if post.comp.72 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.72 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.72 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.72 }}</td>
+	    <td>{{ post.ARR_TIME.72 }}</td>
+	    <td>{{ post.RES.72 }}</td>
+	    <td>{{ post.AZM.72 }}</td>
+	    <td>{{ post.DIS.72 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.73 %}
+	  <tr>
+	    <td>{{ post.station.73 }}</td>
+	    {% if post.comp.73 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.73 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.73 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.73 }}</td>
+	    <td>{{ post.ARR_TIME.73 }}</td>
+	    <td>{{ post.RES.73 }}</td>
+	    <td>{{ post.AZM.73 }}</td>
+	    <td>{{ post.DIS.73 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.74 %}
+	  <tr>
+	    <td>{{ post.station.74 }}</td>
+	    {% if post.comp.74 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.74 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.74 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.74 }}</td>
+	    <td>{{ post.ARR_TIME.74 }}</td>
+	    <td>{{ post.RES.74 }}</td>
+	    <td>{{ post.AZM.74 }}</td>
+	    <td>{{ post.DIS.74 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.75 %}
+	  <tr>
+	    <td>{{ post.station.75 }}</td>
+	    {% if post.comp.75 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.75 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.75 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.75 }}</td>
+	    <td>{{ post.ARR_TIME.75 }}</td>
+	    <td>{{ post.RES.75 }}</td>
+	    <td>{{ post.AZM.75 }}</td>
+	    <td>{{ post.DIS.75 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.76 %}
+	  <tr>
+	    <td>{{ post.station.76 }}</td>
+	    {% if post.comp.76 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.76 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.76 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.76 }}</td>
+	    <td>{{ post.ARR_TIME.76 }}</td>
+	    <td>{{ post.RES.76 }}</td>
+	    <td>{{ post.AZM.76 }}</td>
+	    <td>{{ post.DIS.76 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.77 %}
+	  <tr>
+	    <td>{{ post.station.77 }}</td>
+	    {% if post.comp.77 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.77 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.77 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.77 }}</td>
+	    <td>{{ post.ARR_TIME.77 }}</td>
+	    <td>{{ post.RES.77 }}</td>
+	    <td>{{ post.AZM.77 }}</td>
+	    <td>{{ post.DIS.77 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.78 %}
+	  <tr>
+	    <td>{{ post.station.78 }}</td>
+	    {% if post.comp.78 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.78 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.78 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.78 }}</td>
+	    <td>{{ post.ARR_TIME.78 }}</td>
+	    <td>{{ post.RES.78 }}</td>
+	    <td>{{ post.AZM.78 }}</td>
+	    <td>{{ post.DIS.78 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.79 %}
+	  <tr>
+	    <td>{{ post.station.79 }}</td>
+	    {% if post.comp.79 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.79 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.79 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.79 }}</td>
+	    <td>{{ post.ARR_TIME.79 }}</td>
+	    <td>{{ post.RES.79 }}</td>
+	    <td>{{ post.AZM.79 }}</td>
+	    <td>{{ post.DIS.79 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.80 %}
+	  <tr>
+	    <td>{{ post.station.80 }}</td>
+	    {% if post.comp.80 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.80 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.80 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.80 }}</td>
+	    <td>{{ post.ARR_TIME.80 }}</td>
+	    <td>{{ post.RES.80 }}</td>
+	    <td>{{ post.AZM.80 }}</td>
+	    <td>{{ post.DIS.80 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.81 %}
+	  <tr>
+	    <td>{{ post.station.81 }}</td>
+	    {% if post.comp.81 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.81 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.81 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.81 }}</td>
+	    <td>{{ post.ARR_TIME.81 }}</td>
+	    <td>{{ post.RES.81 }}</td>
+	    <td>{{ post.AZM.81 }}</td>
+	    <td>{{ post.DIS.81 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.82 %}
+	  <tr>
+	    <td>{{ post.station.82 }}</td>
+	    {% if post.comp.82 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.82 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.82 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.82 }}</td>
+	    <td>{{ post.ARR_TIME.82 }}</td>
+	    <td>{{ post.RES.82 }}</td>
+	    <td>{{ post.AZM.82 }}</td>
+	    <td>{{ post.DIS.82 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.82 %}
+	  <tr>
+	    <td>{{ post.station.82 }}</td>
+	    {% if post.comp.82 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.82 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.82 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.82 }}</td>
+	    <td>{{ post.ARR_TIME.82 }}</td>
+	    <td>{{ post.RES.82 }}</td>
+	    <td>{{ post.AZM.82 }}</td>
+	    <td>{{ post.DIS.82 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.83 %}
+	  <tr>
+	    <td>{{ post.station.83 }}</td>
+	    {% if post.comp.83 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.83 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.83 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.83 }}</td>
+	    <td>{{ post.ARR_TIME.83 }}</td>
+	    <td>{{ post.RES.83 }}</td>
+	    <td>{{ post.AZM.83 }}</td>
+	    <td>{{ post.DIS.83 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.84 %}
+	  <tr>
+	    <td>{{ post.station.84 }}</td>
+	    {% if post.comp.84 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.84 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.84 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.84 }}</td>
+	    <td>{{ post.ARR_TIME.84 }}</td>
+	    <td>{{ post.RES.84 }}</td>
+	    <td>{{ post.AZM.84 }}</td>
+	    <td>{{ post.DIS.84 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.85 %}
+	  <tr>
+	    <td>{{ post.station.85 }}</td>
+	    {% if post.comp.85 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.85 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.85 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.85 }}</td>
+	    <td>{{ post.ARR_TIME.85 }}</td>
+	    <td>{{ post.RES.85 }}</td>
+	    <td>{{ post.AZM.85 }}</td>
+	    <td>{{ post.DIS.85 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.86 %}
+	  <tr>
+	    <td>{{ post.station.86 }}</td>
+	    {% if post.comp.86 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.86 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.86 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.86 }}</td>
+	    <td>{{ post.ARR_TIME.86 }}</td>
+	    <td>{{ post.RES.86 }}</td>
+	    <td>{{ post.AZM.86 }}</td>
+	    <td>{{ post.DIS.86 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.87 %}
+	  <tr>
+	    <td>{{ post.station.87 }}</td>
+	    {% if post.comp.87 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.87 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.87 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.87 }}</td>
+	    <td>{{ post.ARR_TIME.87 }}</td>
+	    <td>{{ post.RES.87 }}</td>
+	    <td>{{ post.AZM.87 }}</td>
+	    <td>{{ post.DIS.87 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.88 %}
+	  <tr>
+	    <td>{{ post.station.88 }}</td>
+	    {% if post.comp.88 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.88 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.88 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.88 }}</td>
+	    <td>{{ post.ARR_TIME.88 }}</td>
+	    <td>{{ post.RES.88 }}</td>
+	    <td>{{ post.AZM.88 }}</td>
+	    <td>{{ post.DIS.88 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.89 %}
+	  <tr>
+	    <td>{{ post.station.89 }}</td>
+	    {% if post.comp.89 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.89 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.89 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.89 }}</td>
+	    <td>{{ post.ARR_TIME.89 }}</td>
+	    <td>{{ post.RES.89 }}</td>
+	    <td>{{ post.AZM.89 }}</td>
+	    <td>{{ post.DIS.89 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.90 %}
+	  <tr>
+	    <td>{{ post.station. }}</td>
+	    {% if post.comp.90 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.90 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.90 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.90 }}</td>
+	    <td>{{ post.ARR_TIME.90 }}</td>
+	    <td>{{ post.RES.90 }}</td>
+	    <td>{{ post.AZM.90 }}</td>
+	    <td>{{ post.DIS.90 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.91 %}
+	  <tr>
+	    <td>{{ post.station.91 }}</td>
+	    {% if post.comp.91 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.91 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.91 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.91 }}</td>
+	    <td>{{ post.ARR_TIME.91 }}</td>
+	    <td>{{ post.RES.91 }}</td>
+	    <td>{{ post.AZM.91 }}</td>
+	    <td>{{ post.DIS.91 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.92 %}
+	  <tr>
+	    <td>{{ post.station.92 }}</td>
+	    {% if post.comp.92 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.92 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.92 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.92 }}</td>
+	    <td>{{ post.ARR_TIME.92 }}</td>
+	    <td>{{ post.RES.92 }}</td>
+	    <td>{{ post.AZM.92 }}</td>
+	    <td>{{ post.DIS.92 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.93 %}
+	  <tr>
+	    <td>{{ post.station.93 }}</td>
+	    {% if post.comp.93 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.93 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.93 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.93 }}</td>
+	    <td>{{ post.ARR_TIME.93 }}</td>
+	    <td>{{ post.RES.93 }}</td>
+	    <td>{{ post.AZM.93 }}</td>
+	    <td>{{ post.DIS.93 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.94 %}
+	  <tr>
+	    <td>{{ post.station.94 }}</td>
+	    {% if post.comp.94 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.94 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.94 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.94 }}</td>
+	    <td>{{ post.ARR_TIME.94 }}</td>
+	    <td>{{ post.RES.94 }}</td>
+	    <td>{{ post.AZM.94 }}</td>
+	    <td>{{ post.DIS.94 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.95 %}
+	  <tr>
+	    <td>{{ post.station.95 }}</td>
+	    {% if post.comp.95 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.95 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.95 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.95 }}</td>
+	    <td>{{ post.ARR_TIME.95 }}</td>
+	    <td>{{ post.RES.95 }}</td>
+	    <td>{{ post.AZM.95 }}</td>
+	    <td>{{ post.DIS.95 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.96 %}
+	  <tr>
+	    <td>{{ post.station.96 }}</td>
+	    {% if post.comp.96 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.96 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.96 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.96 }}</td>
+	    <td>{{ post.ARR_TIME.96 }}</td>
+	    <td>{{ post.RES.96 }}</td>
+	    <td>{{ post.AZM.96 }}</td>
+	    <td>{{ post.DIS.96 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.97 %}
+	  <tr>
+	    <td>{{ post.station.97 }}</td>
+	    {% if post.comp.97 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.97 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.97 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.97 }}</td>
+	    <td>{{ post.ARR_TIME.97 }}</td>
+	    <td>{{ post.RES.97 }}</td>
+	    <td>{{ post.AZM.97 }}</td>
+	    <td>{{ post.DIS.97 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.98 %}
+	  <tr>
+	    <td>{{ post.station.98 }}</td>
+	    {% if post.comp.98 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.98 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.98 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.98 }}</td>
+	    <td>{{ post.ARR_TIME.98 }}</td>
+	    <td>{{ post.RES.98 }}</td>
+	    <td>{{ post.AZM.98 }}</td>
+	    <td>{{ post.DIS.98 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.99 %}
+	  <tr>
+	    <td>{{ post.station.99 }}</td>
+	    {% if post.comp.99 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.99 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.99 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.99 }}</td>
+	    <td>{{ post.ARR_TIME.99 }}</td>
+	    <td>{{ post.RES.99 }}</td>
+	    <td>{{ post.AZM.99 }}</td>
+	    <td>{{ post.DIS.99 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.100 %}
+	  <tr>
+	    <td>{{ post.station.100 }}</td>
+	    {% if post.comp.100 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.100 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.100 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.100 }}</td>
+	    <td>{{ post.ARR_TIME.100 }}</td>
+	    <td>{{ post.RES.100 }}</td>
+	    <td>{{ post.AZM.100 }}</td>
+	    <td>{{ post.DIS.100 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.101 %}
+	  <tr>
+	    <td>{{ post.station.101 }}</td>
+	    {% if post.comp.101 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.101 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.101 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.101 }}</td>
+	    <td>{{ post.ARR_TIME.101 }}</td>
+	    <td>{{ post.RES.101 }}</td>
+	    <td>{{ post.AZM.101 }}</td>
+	    <td>{{ post.DIS.101 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.102 %}
+	  <tr>
+	    <td>{{ post.station.102 }}</td>
+	    {% if post.comp.102 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.102 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.102 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.102 }}</td>
+	    <td>{{ post.ARR_TIME.102 }}</td>
+	    <td>{{ post.RES.102 }}</td>
+	    <td>{{ post.AZM.102 }}</td>
+	    <td>{{ post.DIS.102 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.103 %}
+	  <tr>
+	    <td>{{ post.station.103 }}</td>
+	    {% if post.comp.103 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.103 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.103 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.103 }}</td>
+	    <td>{{ post.ARR_TIME.103 }}</td>
+	    <td>{{ post.RES.103 }}</td>
+	    <td>{{ post.AZM.103 }}</td>
+	    <td>{{ post.DIS.103 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.104 %}
+	  <tr>
+	    <td>{{ post.station.104 }}</td>
+	    {% if post.comp.104 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.104 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.104 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.104 }}</td>
+	    <td>{{ post.ARR_TIME.104 }}</td>
+	    <td>{{ post.RES.104 }}</td>
+	    <td>{{ post.AZM.104 }}</td>
+	    <td>{{ post.DIS.104 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.105 %}
+	  <tr>
+	    <td>{{ post.station.105 }}</td>
+	    {% if post.comp.105 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.105 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.105 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.105 }}</td>
+	    <td>{{ post.ARR_TIME.105 }}</td>
+	    <td>{{ post.RES.105 }}</td>
+	    <td>{{ post.AZM.105 }}</td>
+	    <td>{{ post.DIS.105 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.106 %}
+	  <tr>
+	    <td>{{ post.station.106 }}</td>
+	    {% if post.comp.106 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.106 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.106 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.106 }}</td>
+	    <td>{{ post.ARR_TIME.106 }}</td>
+	    <td>{{ post.RES.106 }}</td>
+	    <td>{{ post.AZM.106 }}</td>
+	    <td>{{ post.DIS.106 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.107 %}
+	  <tr>
+	    <td>{{ post.station.107 }}</td>
+	    {% if post.comp.107 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.107 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.107 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.107 }}</td>
+	    <td>{{ post.ARR_TIME.107 }}</td>
+	    <td>{{ post.RES.107 }}</td>
+	    <td>{{ post.AZM.107 }}</td>
+	    <td>{{ post.DIS.107 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.108 %}
+	  <tr>
+	    <td>{{ post.station.108 }}</td>
+	    {% if post.comp.108 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.108 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.108 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.108 }}</td>
+	    <td>{{ post.ARR_TIME.108 }}</td>
+	    <td>{{ post.RES.108 }}</td>
+	    <td>{{ post.AZM.108 }}</td>
+	    <td>{{ post.DIS.108 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.109 %}
+	  <tr>
+	    <td>{{ post.station.109 }}</td>
+	    {% if post.comp.109 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.109 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.109 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.109 }}</td>
+	    <td>{{ post.ARR_TIME.109 }}</td>
+	    <td>{{ post.RES.109 }}</td>
+	    <td>{{ post.AZM.109 }}</td>
+	    <td>{{ post.DIS.109 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.110 %}
+	  <tr>
+	    <td>{{ post.station.110 }}</td>
+	    {% if post.comp.110 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.110 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.110 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.110 }}</td>
+	    <td>{{ post.ARR_TIME.110 }}</td>
+	    <td>{{ post.RES.110 }}</td>
+	    <td>{{ post.AZM.110 }}</td>
+	    <td>{{ post.DIS.110 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.111 %}
+	  <tr>
+	    <td>{{ post.station.111 }}</td>
+	    {% if post.comp.111 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.111 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.111 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.111 }}</td>
+	    <td>{{ post.ARR_TIME.111 }}</td>
+	    <td>{{ post.RES.111 }}</td>
+	    <td>{{ post.AZM.111 }}</td>
+	    <td>{{ post.DIS.111 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.112 %}
+	  <tr>
+	    <td>{{ post.station.112 }}</td>
+	    {% if post.comp.112 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.112 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.112 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.112 }}</td>
+	    <td>{{ post.ARR_TIME.111 }}</td>
+	    <td>{{ post.RES.112 }}</td>
+	    <td>{{ post.AZM.112 }}</td>
+	    <td>{{ post.DIS.112 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.113 %}
+	  <tr>
+	    <td>{{ post.station.113 }}</td>
+	    {% if post.comp.113 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.113 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.113 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.113 }}</td>
+	    <td>{{ post.ARR_TIME.113 }}</td>
+	    <td>{{ post.RES.113 }}</td>
+	    <td>{{ post.AZM.113 }}</td>
+	    <td>{{ post.DIS.113 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.114 %}
+	  <tr>
+	    <td>{{ post.station.114 }}</td>
+	    {% if post.comp.114 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.114 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.114 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.114 }}</td>
+	    <td>{{ post.ARR_TIME.114 }}</td>
+	    <td>{{ post.RES.114 }}</td>
+	    <td>{{ post.AZM.114 }}</td>
+	    <td>{{ post.DIS.114 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.115 %}
+	  <tr>
+	    <td>{{ post.station.115 }}</td>
+	    {% if post.comp.115 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.115 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.115 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.115 }}</td>
+	    <td>{{ post.ARR_TIME.115 }}</td>
+	    <td>{{ post.RES.115 }}</td>
+	    <td>{{ post.AZM.115 }}</td>
+	    <td>{{ post.DIS.115 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.116 %}
+	  <tr>
+	    <td>{{ post.station.116 }}</td>
+	    {% if post.comp.116 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.116 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.116 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.116 }}</td>
+	    <td>{{ post.ARR_TIME.116 }}</td>
+	    <td>{{ post.RES.116 }}</td>
+	    <td>{{ post.AZM.116 }}</td>
+	    <td>{{ post.DIS.116 }}</td>
+	  </tr>
+	{% endif %}
+	{% if post.comp.117 %}
+	  <tr>
+	    <td>{{ post.station.117 }}</td>
+	    {% if post.comp.117 == 'Z' %}
+	    	<td>BHZ</td>
+	    {% elif post.comp.117 == 'N' %}
+	    	<td>BHN</td>
+	    {% elif post.comp.117 == 'E' %}
+	    	<td>BHE</td>
+	    {% endif %}
+	    <td>{{ post.PHASE.117 }}</td>
+	    <td>{{ post.ARR_TIME.117 }}</td>
+	    <td>{{ post.RES.117 }}</td>
+	    <td>{{ post.AZM.117 }}</td>
+	    <td>{{ post.DIS.117 }}</td>
+	  </tr>
+	{% endif %}
+	</table>
+          
+
+{% endblock content %}

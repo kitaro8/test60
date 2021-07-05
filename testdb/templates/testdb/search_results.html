@@ -1,0 +1,26 @@
+{% extends "testdb/base.html" %}
+{% block content %}
+
+		{% for post in posts %}
+		{% csrf_token %}
+	      <table style="width:100%">
+	        <tr>
+	          <th>Origin Time (UTC)</th>
+	          <th> Magnitude </th>
+	          <th>Latitude (deg-N)</th>
+	          <th>Longitude (deg-E)</th>
+	          <th>Depth (km)</th>
+	          <th>Region</th>
+	        </tr>
+	        <tr>
+	          <td><a class="article-title" href="{% url 'post_detail' post.id %}">{{ post.event }}</a></td>
+	          <td>{{ post.Magnitude }}</td>
+	          <td>{{ post.Latitude }}</td>
+	          <td>{{ post.Longitude }}</td>
+	          <td>{{ post.Depth }}</td>
+	          <td>{{ post.Region }}</td>
+	        </tr>
+	      </table>
+		{% endfor %}
+{% endblock content %}
+

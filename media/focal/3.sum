@@ -1,0 +1,27 @@
+     0.000      33.6529     45.7214      9.93 20200531040610.619        1590897970.62
+STA  COMP DIS(K) AZM  AIN    ARR TIME             RES(SEC) WT QFM PHASE    WGT
+ SLY2   Z  216.07 351.  52. 20200531040645.059         0.00  0 iD P        0.23
+ BZA1   Z  217.32  65.  52. 20200531040645.200        -0.02  2 eD P        0.11
+ DOB1   Z  228.08  86.  52. 20200531040646.600         0.02  2 eD P        0.11
+ AMIS   Z  400.56 122.  52. 20200531040708.400        -0.01  2 eD P        0.06
+ RETURN FOR NEXT SCREEN
+
+
+ Error Ellipse  X=   0.0711 km  Y= 0.2349 km  Theta = 134.2208 deg
+
+ RMS Error        :               0.000              sec
+ Travel_Time_Table:          WUS     
+ Latitude         :             33.6529 +-    0.0016 N         0.1755 km
+ Longitude        :             45.7214 +-    0.0019 E         0.1716 km
+ Depth            :                9.93 +-      0.01 km
+ Epoch Time       :      1590897970.619 +-      0.02 sec
+ Event Time       :  20200531040610.619 +-      0.02 sec
+ Event (OCAL)     :  2020 05 31 04 06 10 619
+ HYPO71 Quality   :                  AD
+ Gap              :                 229              deg
+ 
+    ch evla    33.6529 evlo    45.7214 evdp       9.93
+    ch ocal   2020 05 31 04 06 10 619
+ 
+    ch o gmt   2020 152  04 06 10 619
+

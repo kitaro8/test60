@@ -1,0 +1,27 @@
+{% extends "testdb/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<br>
+    <div class="content-section" style="margin-left: 120px; font-family: time new romane">
+        <form action="" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+                <label for="file">File: </label>
+                <br>
+                <input type="file" name="file">
+                <br><hr>
+                <label for="file">Image: </label>
+                <br>
+                <input type="file" name="image">
+                <br><hr>
+                <label for="Region">Region: </label>
+                <br>
+                <input id="Region" type="text" name="Region" maxlength="100" required>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Post</button>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
