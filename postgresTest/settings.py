@@ -137,7 +137,7 @@ AWS_ACCESS_KEY_ID = 'AKIA5M3RYIKHAO5Y4W76'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_URL='https://mpsc-iq.s3.amazonaws.com/'
 AWS_DEFAULT_ACL = None
-AWS_S3_REGION_NAME = 'us-east-2'
+AWS_S3_REGION_NAME = 'us-east-1'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
 
 
