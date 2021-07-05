@@ -45,7 +45,7 @@
     padding: 40px;">
     {% for focal in focal %}
 
-        <a href="{{ focal.file.url }}" target="_blank"><h4 style="display: inline-block;">{{ focal.date }} ,</h4><h4 style="display: inline-block;">{{ focal.title }}</h4></a><hr>
+        <iframe  href="{{ focal.file.url }}" target="_blank"><h4 style="display: inline-block;">{{ focal.date }} ,</h4><h4 style="display: inline-block;">{{ focal.title }}</h4></iframe ><hr>
 
     {% endfor %}
   </div>
