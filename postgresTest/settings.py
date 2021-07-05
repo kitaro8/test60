@@ -35,8 +35,6 @@ INSTALLED_APPS = [
     'testdb',
     'users.apps.UsersConfig',
     'crispy_forms',
-    'django.middleware.security.SecurityMiddleware',
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
