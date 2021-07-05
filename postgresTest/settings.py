@@ -162,5 +162,5 @@ LOGIN_REDIRECT_URL = 'testdb-home'
 
 LOGIN_URL = 'login'
 
-import django_heroku
-django_heroku.settigns(locals(), staticfiles=False)
+# import django_heroku
+# django_heroku.settigns(locals(), staticfiles=False)
