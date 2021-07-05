@@ -45,7 +45,7 @@
     padding: 40px;">
     {% for focal in focal %}
 
-        <a href="{{ focal.file.url }}" download=""><h4 style="display: inline-block;">{{ focal.date }} , <a href="{{ focal.file.url }}"><h4 style="display: inline-block;">{{ focal.date }} ,</h4><h4 style="display: inline-block;">display</h4></a><hr></h4><h4 style="display: inline-block;">{{ focal.title }}</h4></a><hr>
+        <a href="{{ focal.file.url }}" download=""><h4 style="display: inline-block;">{{ focal.date }} , <a href="{{ focal.file }}"><h4 style="display: inline-block;">{{ focal.date }} ,</h4><h4 style="display: inline-block;">display</h4></a><hr></h4><h4 style="display: inline-block;">{{ focal.title }}</h4></a><hr>
         
     {% endfor %}
   </div>
