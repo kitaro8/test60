@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'postgresTest.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dbtest', 
-        'USER': 'postgres', 
-        'PASSWORD': 'k8k8k8k8',
-        'HOST': 'localhost', 
+        'NAME': 'd972f3g93d6ru', 
+        'USER': 'sbvkcqyferbuto', 
+        'PASSWORD': 'ca3c9d422e637b3b5b4fbabd2fbf8b1435a56deaff5c0747b2901293efadeeda',
+        'HOST': 'ec2-35-169-188-58.compute-1.amazonaws.com', 
         'PORT': '5432',
     }
 }
