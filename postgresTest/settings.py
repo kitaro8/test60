@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y*rxe6-0%710fdy)#70qqilj3s0$5-xb_xy*h(bk!cr!&_^r+q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mpsn-iq.onrender.com', '127.0.0.1', 'www.mpsn-iq.org', 'mpsn-iq.org', 'mpsn-iq:10000']
+ALLOWED_HOSTS = ['noody.onrender.com', '127.0.0.1', 'www.mpsn-iq.org', 'mpsn-iq.org', 'mpsn-iq:10000']
 
 
 # Application definition
