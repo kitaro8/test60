@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y*rxe6-0%710fdy)#70qqilj3s0$5-xb_xy*h(bk!cr!&_^r+q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mpsc-iq.herokuapp.com', 'mpsc-iq.com', 'www.mpsc-iq.com']
+ALLOWED_HOSTS = ['mpsn-iq.onrender.com', '127.0.0.1', 'www.mpsn-iq.org', 'mpsn-iq.org', 'mpsn-iq:10000']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
+
     
 ]
 
@@ -79,16 +80,52 @@ WSGI_APPLICATION = 'postgresTest.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd972f3g93d6ru', 
-        'USER': 'sbvkcqyferbuto', 
-        'PASSWORD': 'ca3c9d422e637b3b5b4fbabd2fbf8b1435a56deaff5c0747b2901293efadeeda',
-        'HOST': 'ec2-35-169-188-58.compute-1.amazonaws.com', 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mpsn_data_poc7',
+        'USER': 'mpsn_data_poc7_user',
+        'PASSWORD': 'lv94lwsO8qQ7AZy80YXAwWAgx8vq8TOx',
+        'HOST': 'dpg-cigcoud9aq012ev1fn0g-a',
         'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'sslrootcert': '/path/to/certificate.crt',
+
+        },
     }
 }
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres', 
+#         'USER': 'postgres', 
+#         'PASSWORD': 'k8k8k8k8',
+#         'HOST': 'localhost', 
+#         'PORT': '5432',
+#     }
+# }
+
+SECURE_SSL_CIPHERS = 'HIGH:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!3DES:!MD5:!PSK'
+SECURE_SSL_PROTOCOLS = ['TLSv1.2', 'TLSv1.3']
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+SECURE_SSL_REDIRECT = True
+
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+# import dj_database_url
+
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=os.getenv('DATABASE_URL', "postgres://mpsn_data_poc7_user:lv94lwsO8qQ7AZy80YXAwWAgx8vq8TOx@dpg-cigcoud9aq012ev1fn0g-a.oregon-postgres.render.com/mpsn_data_poc7"), conn_max_age=60)
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -132,29 +169,73 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AWS_STORAGE_BUCKET_NAME = 'mpsc-iq'
-AWS_ACCESS_KEY_ID = 'AKIA5M3RYIKHAO5Y4W76'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_URL='https://mpsc-iq.s3.amazonaws.com/'
-AWS_DEFAULT_ACL = None
-AWS_S3_REGION_NAME = 'us-east-1'
-AWS_S3_SIGNATURE_VERSION = 's3v4'
 
-#test
+# AWS_STORAGE_BUCKET_NAME = 'mpsniq'
+# AWS_ACCESS_KEY_ID = '22a34f8a6bd9'
+# AWS_SECRET_ACCESS_KEY = '0056eb1268619cb1888b77de11a5c32b2fa8a06202'
 
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_DEFAULT_ACL = None
+# AWS_S3_REGION_NAME = 'us-east-005'
+# AWS_S3_SIGNATURE_VERSION = 's3v4'
 
-STATIC_URL = AWS_URL + '/static/'
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-MEDIA_URL = AWS_URL + '/media/'
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+BACKBLAZEB2_URL='s3.us-east-005.backblazeb2.com'
+BACKBLAZEB2_ACCOUNT_ID = '22a34f8a6bd9'
+BACKBLAZEB2_APP_KEY_ID = '22a34f8a6bd9'
+BACKBLAZEB2_APP_KEY = '005ecc7b180e6bc54f680bb56e89ba445e315e5f24'
+BACKBLAZEB2_BUCKET_NAME = 'mpsniq'
+BACKBLAZEB2_BUCKET_ID = '4242aa33e4ef08ca86db0d19'
+
+
+# test
+
+# pylint: disable=unused-import
+import django_backblaze_b2.storage
+
+
+
+# from django.conf import settings
+
+
+# bucket_name = settings.BACKBLAZE_CONFIG['mpsniq']
+# account_id = settings.BACKBLAZE_CONFIG['22a34f8a6bd9']
+# application_key_id = settings.BACKBLAZE_CONFIG['22a34f8a6bd9']
+# application_key = settings.BACKBLAZE_CONFIG['005ecc7b180e6bc54f680bb56e89ba445e315e5f24']
+# bucket_endpoint = settings.BACKBLAZE_CONFIG['https://s3.us-east-005.backblazeb2.com']
+
+
+
+
+# DEFAULT_FILE_STORAGE = 'django_backblaze_b2.storage.B2Storage'
+# STATICFILES_STORAGE = 'django_backblaze_b2.storage.B2Storage'
+
+from b2_storage.storage import B2Storage
+
+
+DEFAULT_FILE_STORAGE = 'b2_storage.storage.B2Storage'
+STATICFILES_STORAGE = 'b2_storage.storage.B2Storage'
+
+
+
+# DEFAULT_FILE_STORAGE = 'django_b2storage.storage.backends.B2Storage'
+# STATICFILES_STORAGE = 'django_b2storage.storage.backends.B2Storage'
+
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+
+STATIC_URL = BACKBLAZEB2_URL + '/static/'
+MEDIA_URL = BACKBLAZEB2_URL + '/media/'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# USE_X_FORWARDED_HOST = True
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
