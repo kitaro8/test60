@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-y*rxe6-0%710fdy)#70qqilj3s0$5-xb_xy*h(bk!cr!&_^r+q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['noody.onrender.com', '127.0.0.1', 'www.mpsn-iq.org', 'mpsn-iq.org', 'mpsn-iq:10000']
+ALLOWED_HOSTS = ['mpsn-iq.onrender.com',' mpsn-iq-org.onrender.com', '127.0.0.1', 'www.mpsn-iq.org', 'mpsn-iq.org', 'mpsn-iq:10000', 'localhost']
 
 
 # Application definition
@@ -178,18 +178,57 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # AWS_S3_REGION_NAME = 'us-east-005'
 # AWS_S3_SIGNATURE_VERSION = 's3v4'
 
-BACKBLAZEB2_URL='s3.us-east-005.backblazeb2.com'
-BACKBLAZEB2_ACCOUNT_ID = '22a34f8a6bd9'
-BACKBLAZEB2_APP_KEY_ID = '22a34f8a6bd9'
-BACKBLAZEB2_APP_KEY = '0051475f3938d2dfa8ae16ca8f1b4e6a97fcfb424f'
-BACKBLAZEB2_BUCKET_NAME = 'mpsniq'
-BACKBLAZEB2_BUCKET_ID = '4242aa33e4ef08ca86db0d19'
+# BACKBLAZEB2_URL='s3.us-east-005.backblazeb2.com'
+# BACKBLAZEB2_ACCOUNT_ID = '22a34f8a6bd9'
+# BACKBLAZEB2_APP_KEY_ID = '22a34f8a6bd9'
+# BACKBLAZEB2_APP_KEY = '005ecc7b180e6bc54f680bb56e89ba445e315e5f24'
+# BACKBLAZEB2_BUCKET_NAME = 'mpsniq'
+# BACKBLAZEB2_BUCKET_ID = '4242aa33e4ef08ca86db0d19'
+
+from storages.backends.azure_storage import AzureStorage
+
+import os
+
+
+
+# Replace the following values with your Azure Storage account details
+AZURE_ACCOUNT_NAME = 'mpsniq'
+AZURE_ACCOUNT_KEY = 'Iff4wO/IO0IZE0FZiOksqM7xiqr1mScg85c413FYnyUPIYbwLcfG8DBG6VmFneMvYrHwrU2Hlu9r+AStztOKhg=='
+AZURE_CONTAINER = 'mpsn-container'
+
+# Azure Storage URL
+AZURE_STORAGE_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/'
+
+# Use Azure Storage for default file storage.
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+
+# Set Azure Storage URLs for static and media files.
+# Azure Storage URL for static files.
+STATIC_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/static/'
+
+# Azure Storage URL for media files.
+MEDIA_URL = f'https://{AZURE_ACCOUNT_NAME}.blob.core.windows.net/{AZURE_CONTAINER}/media/'
+
+
+AZURE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=mpsniq;AccountKey=Iff4wO/IO0IZE0FZiOksqM7xiqr1mScg85c413FYnyUPIYbwLcfG8DBG6VmFneMvYrHwrU2Hlu9r+AStztOKhg==;EndpointSuffix=core.windows.net"
+
+# Optional: Set Azure Storage CDN endpoint if applicable.
+# AZURE_CUSTOM_DOMAIN = 'yourcdnendpoint.azureedge.net'
+
+# Uncomment the following lines if you want to use Azure Storage for Django storage as well.
+STATICFILES_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+# AZURE_STATIC_STORAGE_ACCOUNT_NAME = 'your_account_name'
+# AZURE_STATIC_STORAGE_ACCOUNT_KEY = 'your_account_key'
+# AZURE_STATIC_STORAGE_CONTAINER = 'your_static_container_name'
+
+# Optional: Set Azure Storage CDN endpoint for static files.
+# AZURE_STATIC_STORAGE_CUSTOM_DOMAIN = 'yourcdnendpoint.azureedge.net'
 
 
 # test
 
 # pylint: disable=unused-import
-import django_backblaze_b2.storage
+# import django_backblaze_b2.storage
 
 
 
@@ -208,11 +247,14 @@ import django_backblaze_b2.storage
 # DEFAULT_FILE_STORAGE = 'django_backblaze_b2.storage.B2Storage'
 # STATICFILES_STORAGE = 'django_backblaze_b2.storage.B2Storage'
 
-from b2_storage.storage import B2Storage
+# from b2_storage.storage import B2Storage
+
+DEFAULT_FILE_STORAGE = "storages.backends.azure_storage.AzureStorage"
+STATICFILES_STORAGE = "storages.backends.azure_storage.AzureStorage"
 
 
-DEFAULT_FILE_STORAGE = 'b2_storage.storage.B2Storage'
-STATICFILES_STORAGE = 'b2_storage.storage.B2Storage'
+# DEFAULT_FILE_STORAGE = 'b2_storage.storage.B2Storage'
+# STATICFILES_STORAGE = 'b2_storage.storage.B2Storage'
 
 
 
@@ -224,8 +266,8 @@ STATICFILES_STORAGE = 'b2_storage.storage.B2Storage'
 
 
 
-STATIC_URL = BACKBLAZEB2_URL + '/static/'
-MEDIA_URL = BACKBLAZEB2_URL + '/media/'
+# STATIC_URL = BACKBLAZEB2_URL + '/static/'
+# MEDIA_URL = BACKBLAZEB2_URL + '/media/'
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
